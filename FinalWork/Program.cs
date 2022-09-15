@@ -15,6 +15,7 @@ WriteLine("Задайте массив строк через пробел: ");
 string[] array = ReadLine()!.Split(" ", StringSplitOptions.RemoveEmptyEntries).ToArray();
 string[] newArray = new string[array.Length];
 SelectFromArray(array, newArray);
+PrintArray(newArray);
 
 void SelectFromArray(string[] array1, string[] array2)
 {
@@ -27,4 +28,13 @@ void SelectFromArray(string[] array1, string[] array2)
             count++;
         }
     }
+}
+
+void PrintArray(string[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Write($"{array[i]} ");
+    }
+    WriteLine();
 }
